@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RentACatImpl implements RentACat {
+	String newline = System.lineSeparator();
 
 	private ArrayList<Cat> cats = new ArrayList<Cat>();
 
@@ -18,8 +19,15 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean returnCat(int id) {
-		// TODO: Fill in
-		return false;
+		Cat c = getCat(id);
+		if(c == null) return false;
+		if(c.getRented() == false){
+			System.out.print(c.getName() + " is already here!" + newline);
+			return false;
+		}
+		c.returnCat();
+		System.out.print("Welcome back, " + c.getName() + "!" + newline);
+		return true;
 	}
 
 	/**
@@ -33,8 +41,15 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean rentCat(int id) {
-		// TODO: Fill in
-		return false;
+		Cat c = getCat(id);
+		if(c == null) return false;
+		if(c.getRented() == true){
+			System.out.print("Sorry, " + c.getName() + " is not here!" + newline);
+			return false;
+		} 
+		c.rentCat();
+		System.out.print(c.getName() + " has been rented." + newline);
+		return true;
 	}
 
 	/**
@@ -47,8 +62,10 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean renameCat(int id, String name) {
-		// TODO: Fill in
-		return false;
+		Cat c = getCat(id);
+		if(c == null) return false;
+		c.renameCat(name);
+		return true;
 	}
 
 	/**
@@ -62,8 +79,11 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public String listCats() {
-		// TODO: Fill in
-		return "WRITE CODE FOR THIS";
+		String list = "";
+		for (Cat c : cats){
+			list = list + c.toString() + newline;
+		}
+		return list;
 	}
 
 	/**
