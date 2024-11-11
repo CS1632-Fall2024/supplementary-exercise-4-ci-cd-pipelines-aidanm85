@@ -81,7 +81,7 @@ public class RentACatImpl implements RentACat {
 	public String listCats() {
 		String list = "";
 		for (Cat c : cats){
-			list = list + c.toString() + newline;
+			list = list + c.toString() + "\n";
 		}
 		return list;
 	}
