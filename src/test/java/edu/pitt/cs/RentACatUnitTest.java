@@ -173,7 +173,7 @@ public class RentACatUnitTest {
 		r.addCat(c1);
 		r.addCat(c2);
 		r.addCat(c3);
-		assertEquals("ID 1. Jennyanydots" + newline + "ID 2. Old Deuteronomy" + newline + "ID 3. Mistoffelees" + newline, r.listCats());
+		assertEquals("ID 1. Jennyanydots" +  "ID 2. Old Deuteronomy" + "\n" + "ID 3. Mistoffelees" + "\n", r.listCats());
 	}
 
 	/**
