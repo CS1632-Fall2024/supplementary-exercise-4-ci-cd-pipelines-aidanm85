@@ -108,7 +108,7 @@ public class RentACatUnitTest {
 		m.setAccessible(true);
 		Object ret = m.invoke(r, 2);
 		assertNull(ret);
-		assertEquals("Invalid cat ID." + newline, out.toString());
+		assertEquals("Invalid cat ID." + "\n", out.toString());
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class RentACatUnitTest {
 		r.addCat(c1);
 		r.addCat(c2);
 		r.addCat(c3);
-		assertEquals("ID 1. Jennyanydots" +  "ID 2. Old Deuteronomy" + "\n" + "ID 3. Mistoffelees" + "\n", r.listCats());
+		assertEquals("ID 1. Jennyanydots" +"\n"+  "ID 2. Old Deuteronomy" + "\n" + "ID 3. Mistoffelees" + "\n", r.listCats());
 	}
 
 	/**
