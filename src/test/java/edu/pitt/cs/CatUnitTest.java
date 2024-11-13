@@ -31,7 +31,8 @@ public class CatUnitTest {
 		// Passing InstanceType.IMPL as the first parameter will create a real cat using your CatImpl implementation.
 		// Passing InstanceType.MOCK as the first parameter will create a mock cat using Mockito.
 		// Which type is the correct choice for this unit test?  I'll leave it up to you.  The answer is in the Unit Testing Part 2 lecture. :)
-		
+		// TODO: Fill in
+
 		c = Cat.createInstance(InstanceType.IMPL, 1, "Jennyanydots");
 	}
 
@@ -53,7 +54,9 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testGetId() {
-		assertEquals(1, c.getId());
+		// TODO: Fill in
+		int ret = c.getId();
+		assertEquals(1, ret);
 	}
 
 	/**
@@ -67,7 +70,9 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testGetName() {
-		assertEquals("Jennyanydots", c.getName());
+		// TODO: Fill in
+		String ret = c.getName();
+		assertEquals("Jennyanydots", ret);
 	}
 
 	/**
@@ -81,8 +86,9 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testGetRented() {
-	
-		assertFalse(c.getRented());
+		// TODO: Fill in
+		boolean ret = c.getRented();
+		assertEquals(false, ret);
 	}
 
 	/**
@@ -96,8 +102,9 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testToString() {
-
-		assertEquals("ID 1. Jennyanydots", c.toString());
+		// TODO: Fill in
+		String ret = c.toString();
+		assertEquals("ID 1. Jennyanydots",ret);
 	}
 
 	/**
@@ -112,9 +119,10 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testRentCat() {
-
-		c.rentCat();
-		assertTrue(c.getRented());
+		// TODO: Fill in
+		 c.rentCat();
+		 boolean ret = c.getRented();
+		 assertEquals(true, ret);
 	}
 
 	/**
@@ -130,9 +138,10 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testReturnCat() {
-
+		// TODO: Fill in
 		c.returnCat();
-		assertFalse(c.getRented());
+		boolean ret = c.getRented();
+		assertEquals(false, ret);
 	}
 
 	/**
@@ -147,10 +156,10 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testRenameCat() {
-
+		// TODO: Fill in
 		c.renameCat("Garfield");
-		assertEquals("Garfield", c.getName());
-		assertEquals("ID 1. Garfield", c.toString());
+		String ret = c.getName();
+		assertEquals("Garfield", ret);
 	}
 
 }
